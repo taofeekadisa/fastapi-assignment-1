@@ -55,7 +55,8 @@ async def create_user(user:Annotated[BaseUser, Body()]):
         #time.sleep(3)
     return {"message": "Profile Created Successfully",
             "data":user.model_dump()}
-            
+
+#The endpoint below is to test if a new user is created with the create user endpoint above           
 @app.get("/users", status_code=status.HTTP_200_OK)
 def get_users():
     return users
